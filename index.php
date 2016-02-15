@@ -6,5 +6,6 @@
   </head>
   <body>
     Just started on Github Pages
+    <? echo 'PHP works' ?>
   </body>
 </html>
