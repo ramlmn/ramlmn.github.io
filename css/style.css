@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box
+}
+html, body {
+  margin: 0;
+  background: #fff;
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #1E88E5;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 26px;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+.projects, .gists {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.project, .gist {
+  margin: 15px 20px;
+  padding: 10px 15px;
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+.project__title, .gist__title {
+  font-size: 20px;
+}
+
+.project__desc, .gist__desc {
+  color: #555;
+  font-style: italic;
+}
