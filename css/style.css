@@ -10,7 +10,7 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #1E88E5;
+  color: #1565C0;
 }
 
 a:hover {
@@ -28,7 +28,6 @@ a:hover {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 16px;
-  text-rendering: optimizeLegibility;
 }
 
 .projects, .gists {
