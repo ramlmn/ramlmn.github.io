@@ -1,55 +1,120 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot');
+  src: url('../font/fontello.eot#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff') format('woff'),
+       url('../font/fontello.ttf') format('truetype'),
+       url('../font/fontello.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.icon-github-circled:before { content: '\f09b'; }
+.icon-twitter:before { content: '\f099'; }
+
+
+
+/* Globals */
 * {
   box-sizing: border-box
 }
-html, body {
+
+html {
+  font-size: 16px;
+}
+
+body {
   margin: 0;
+  padding: 2rem 1.5rem;
   background: #fff;
-  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  font: 1rem/1.5 "Raleway", Helvetica, Arial, sans-serif;
+  color: #5A5A5A;
 }
 
 a {
   text-decoration: none;
-  color: #1565C0;
+  color: #08C;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+h1, h2, h3, h4 {
+  margin: 0 0 .5rem;
+  line-height: 1;
+  color: #2A2A2A;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+
+p {
+  margin: 0 0 .5rem;
+}
+
 .container {
-  max-width: 800px;
+  max-width: 40rem;
   width: 100%;
   margin: auto;
-  padding: 26px;
 }
 
-.main-title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 16px;
+
+/* Masterhead */
+.masterhead {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
 }
 
-.projects, .gists {
-  margin-bottom: 24px;
+.masterhead h1 {
+  margin: .5rem 0;
 }
 
-.title {
-  font-size: 24px;
+.masterhead__links a {
+  color: #333;
+  text-decoration: none;
+  transition: all 150ms linear;
+}
+
+.masterhead__links a:hover {
+  color: #08C;
+}
+
+.masterhead__links .icon {
+  font-size: 2rem;
+  margin-right: .5rem;
+  display: inline-block;
 }
 
 .project, .gist {
-  margin: 15px 20px;
-  padding: 10px 15px;
-  background-color: #eee;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  /*background-color: #eee;*/
   border-radius: 2px;
 }
 
 .project__title, .gist__title {
   font-size: 20px;
-}
-
-.project__desc, .gist__desc {
-  color: #555;
-  font-style: italic;
 }
