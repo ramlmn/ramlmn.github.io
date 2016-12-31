@@ -1,55 +1,46 @@
-/* Fonts */
-
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot');
-  src: url('../font/fontello.eot#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff') format('woff'),
-       url('../font/fontello.ttf') format('truetype'),
-       url('../font/fontello.svg') format('svg');
+  src: url('/font/fontello.eot');
+  src: url('/font/fontello.eot#iefix') format('embedded-opentype'),
+       url('/font/fontello.woff') format('woff'),
+       url('/font/fontello.ttf') format('truetype'),
+       url('/font/fontello.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
+@font-face {
+  font-family: emoji;
+  src: local('Apple Color Emoji'),
+    local('Android Emoji'),
+    local('Segoe UI Emoji'),
+    local('Segoe UI Symbol');
 }
 
-.icon-github-circled:before { content: '\f09b'; }
-.icon-twitter:before { content: '\f099'; }
-
-
-
-/* Globals */
-* {
-  box-sizing: border-box
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-}
-
+html,
 body {
   margin: 0;
-  padding: 2rem 1.5rem;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   background: #fff;
-  font: 1rem/1.5 "Raleway", Helvetica, Arial, sans-serif;
-  color: #5A5A5A;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont,
+    'RobotoRegular', 'Droid Sans', 'Segoe UI',
+    Helvetica, 'Helvetica Neue', sans-serif, emoji;
+  color: #616161;
 }
 
 a {
   text-decoration: none;
-  color: #08C;
+  color: #08c;
 }
 
 a:hover {
@@ -57,64 +48,90 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
+  color: #424242;
   margin: 0 0 .5rem;
-  line-height: 1;
-  color: #2A2A2A;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h3 {
-  margin-top: 2rem;
-  font-size: 1.75rem;
+  font-weight: normal;
 }
 
 p {
   margin: 0 0 .5rem;
 }
 
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.icon-github-circled::before { content: '\f09b'; }
+.icon-twitter::before { content: '\f099'; }
+
 .container {
-  max-width: 40rem;
-  width: 100%;
+  max-width: 50rem;
+  padding: 2rem 1rem;
   margin: auto;
 }
 
-
-/* Masterhead */
-.masterhead {
-  padding-bottom: 1rem;
+header {
   border-bottom: 1px solid #eee;
 }
 
-.masterhead h1 {
-  margin: .5rem 0;
+.header__links {
+  display: flex;
 }
 
-.masterhead__links a {
-  color: #333;
+.header__links a {
+  color: inherit;
+  margin: 0 .5rem 0 0;
   text-decoration: none;
-  transition: all 150ms linear;
+  transition: color 100ms linear;
 }
 
-.masterhead__links a:hover {
-  color: #08C;
+.header__links a:hover {
+  color: #08c;
 }
 
-.masterhead__links .icon {
+.header__links .icon {
+  display: flex;
+  line-height: 1;
   font-size: 2rem;
-  margin-right: .5rem;
-  display: inline-block;
+  padding: .5rem;
+}
+
+.projects, .gists {
+  margin-bottom: 1rem;
 }
 
 .project, .gist {
-  margin: 1rem 0;
-  padding: 0 1rem;
-  /*background-color: #eee;*/
-  border-radius: 2px;
+  padding: .5rem 1rem;
 }
 
-.project__title, .gist__title {
-  font-size: 20px;
+
+@media (min-width: 800px) {
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.6875rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4,
+  main {
+    font-size: 1.125rem;
+  }
+
 }
