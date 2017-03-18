@@ -1,15 +1,4 @@
 @font-face {
-  font-family: 'fontello';
-  src: url('/font/fontello.eot');
-  src: url('/font/fontello.eot#iefix') format('embedded-opentype'),
-       url('/font/fontello.woff') format('woff'),
-       url('/font/fontello.ttf') format('truetype'),
-       url('/font/fontello.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: emoji;
   src: local('Apple Color Emoji'),
     local('Android Emoji'),
@@ -26,17 +15,13 @@
 html,
 body {
   margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  font-size: 16px;
   line-height: 1.5;
+  font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif, emoji;
-  color: #616161;
+  color: #424242;
 }
 
 a {
@@ -49,31 +34,14 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-  color: #424242;
   margin: 0 0 .5rem;
   font-weight: normal;
 }
 
 p {
+  color: #616161;
   margin: 0 0 .5rem;
 }
-
-[class^='icon-']::before,
-[class*=' icon-']::before {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-}
-
-.icon-github-circled::before { content: '\f09b'; }
-.icon-twitter::before { content: '\f099'; }
 
 .container {
   max-width: 50rem;
@@ -82,7 +50,11 @@ p {
 }
 
 header {
-  border-bottom: 1px solid #eee;
+  background: #424242;
+}
+
+.header__title {
+  color: #fff;
 }
 
 .header__links {
@@ -90,21 +62,23 @@ header {
 }
 
 .header__links a {
-  color: inherit;
   margin: 0 .5rem 0 0;
-  text-decoration: none;
-  transition: color 100ms linear;
-}
-
-.header__links a:hover {
-  color: #08c;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .header__links .icon {
   display: flex;
-  line-height: 1;
-  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
   padding: .5rem;
+  fill: #fff;
+  transition: all 200ms ease-in-out;
+}
+
+.header__links .icon:hover {
+  fill: #424242;
+  background: #fff;
 }
 
 .projects, .gists {
