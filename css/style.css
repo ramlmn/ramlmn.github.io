@@ -1,15 +1,11 @@
-@font-face {
-  font-family: emoji;
-  src: local('Apple Color Emoji'),
-    local('Android Emoji'),
-    local('Segoe UI Emoji'),
-    local('Segoe UI Symbol');
+html {
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html,
@@ -17,10 +13,9 @@ body {
   margin: 0;
   line-height: 1.5;
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont,
-    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif, emoji;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   color: #424242;
 }
 
@@ -41,6 +36,11 @@ h1, h2, h3, h4 {
 p {
   color: #616161;
   margin: 0 0 .5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .container {
@@ -65,6 +65,15 @@ header {
   margin: 0 .5rem 0 0;
   border-radius: 50%;
   overflow: hidden;
+  color: #fff;
+}
+
+.header__links a:hover,
+.header__links a:focus {
+  color: #424242;
+  background: #fff;
+  transition: background-color 200ms linear,
+    color 200ms linear;
 }
 
 .header__links .icon {
@@ -72,41 +81,13 @@ header {
   width: 3rem;
   height: 3rem;
   padding: .5rem;
-  fill: #fff;
-  transition: all 200ms ease-in-out;
+  fill: currentColor;
 }
 
-.header__links .icon:hover {
-  fill: #424242;
-  background: #fff;
-}
-
-.projects, .gists {
+.section {
   margin-bottom: 1rem;
 }
 
-.project, .gist {
+.section .item {
   padding: .5rem 1rem;
-}
-
-
-@media (min-width: 800px) {
-
-  h1 {
-    font-size: 2.25rem;
-  }
-
-  h2 {
-    font-size: 1.6875rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  h4,
-  main {
-    font-size: 1.125rem;
-  }
-
 }
