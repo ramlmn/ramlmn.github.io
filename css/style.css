@@ -91,3 +91,7 @@ header {
 .section .item {
   padding: .5rem 1rem;
 }
+
+.item h3 {
+  margin: 0;
+}
