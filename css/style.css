@@ -16,25 +16,34 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-  color: #424242;
+  color: #212121;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 a {
   text-decoration: none;
-  color: #08c;
+  color: #1e3cf0;
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 
 h1, h2, h3, h4 {
   margin: 0 0 .5rem;
-  font-weight: normal;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 500;
 }
 
 p {
-  color: #616161;
   margin: 0 0 .5rem;
 }
 
@@ -50,11 +59,12 @@ ul {
 }
 
 header {
-  background: #424242;
+  background: #212121;
+  color: #fff;
 }
 
-.header__title {
-  color: #fff;
+header a {
+  color: #5cb6fc;
 }
 
 .header__links {
@@ -65,15 +75,7 @@ header {
   margin: 0 .5rem 0 0;
   border-radius: 50%;
   overflow: hidden;
-  color: #fff;
-}
-
-.header__links a:hover,
-.header__links a:focus {
-  color: #424242;
-  background: #fff;
-  transition: background-color 200ms linear,
-    color 200ms linear;
+  color: currentColor;
 }
 
 .header__links .icon {
@@ -89,7 +91,18 @@ header {
 }
 
 .section .item {
+  color: #424242;
   padding: .5rem 1rem;
+}
+
+.section .item a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.section .item a:hover,
+.section .item a:focus {
+  color: #212121;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .item h3 {
